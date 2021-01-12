@@ -7,7 +7,7 @@ var playerState = [1, 2];
 var activePlayer= playerState[0];
 var gamePlay =true;
 function initializeGame() {
-    playerColor='red';
+    playerColor='green';
     gamePlay =true;
     lastEmptyCellAvailable=[5, 5, 5, 5, 5, 5];
     playerState = [1, 2];
@@ -15,6 +15,8 @@ function initializeGame() {
     $('.each-white-circle').css('background-color', 'white');
     $('button').attr('disabled');
     $('button').css('cursor', 'not-allowed');
+    $('.active-player').html(activePlayer);
+    $('.player-color').css({'background-color': playerColor, 'color': playerColor});
 
 }
 function fillLastPossibleRowInClickedColumn(elem,colNum) {
